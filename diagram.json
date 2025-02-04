@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "author": "Antonio Henrique Figueira Louro",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": -3.25,
+        "left": 3.55,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 215.15,
+        "left": -124.8,
+        "attrs": { "value": "220" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 119.15,
+        "left": -124.8,
+        "attrs": { "value": "150" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 167.15,
+        "left": -124.8,
+        "attrs": { "value": "220" }
+      },
+      {
+        "type": "wokwi-rgb-led",
+        "id": "rgb1",
+        "top": 148,
+        "left": -248.5,
+        "attrs": { "common": "cathode" }
+      }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GP13", "r1:2", "green", [ "h-25.25", "v54.39", "h-9.6" ] ],
+      [ "pico:GP12", "r3:2", "green", [ "h-54.05", "v15.99" ] ],
+      [ "pico:GP11", "r2:2", "green", [ "h-57.6", "v-19.2" ] ],
+      [ "rgb1:R", "r1:1", "green", [ "v48", "h105.6", "v9.6" ] ],
+      [ "rgb1:G", "r2:1", "green", [ "v9.6", "h49.3", "v-76.8" ] ],
+      [ "rgb1:B", "r3:1", "green", [ "v0" ] ],
+      [ "pico:GND.2", "rgb1:COM", "black", [ "h-268.8", "v19.2" ] ]
+    ],
+    "dependencies": {}
+  }

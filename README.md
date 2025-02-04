@@ -14,5 +14,5 @@ a sequência de acendimento (0-> Vermelho, 1-> Amarelo, 2-> Verde). A cada execu
 ## Vídeo Demonstrativo
 Confira o vídeo no link abaixo:
 
-[![Assista no YouTube](https://youtu.be/NQUnABE11w4)]
+[![Assista no YouTube](https://img.youtube.com/vi/NQUnABE11w4/maxresdefault.jpg)](https://youtu.be/NQUnABE11w4)
 
